@@ -26,7 +26,7 @@ public class CpuPlayer extends Player {
 
         this.stack = new Stack<>();
         save();
-}
+    }
 
 
     public void move() {
@@ -35,24 +35,16 @@ public class CpuPlayer extends Player {
             if (row > 0 && !visited[row - 1][col]) {
                 move(-1, 0);
                 save();
-            }
-
-            else if (col < numCols - 1 && !visited[row][col + 1]) {
+            } else if (col < numCols - 1 && !visited[row][col + 1]) {
                 move(0, 1);
                 save();
-            }
-
-            else if (row < numRows - 1 && !visited[row + 1][col]) {
+            } else if (row < numRows - 1 && !visited[row + 1][col]) {
                 move(1, 0);
                 save();
-            }
-
-            else if (col > 0 && !visited[row][col - 1]) {
+            } else if (col > 0 && !visited[row][col - 1]) {
                 move(0, -1);
                 save();
-            }
-
-            else {
+            } else {
                 stack.pop();
 
                 if (!stack.isEmpty()) {

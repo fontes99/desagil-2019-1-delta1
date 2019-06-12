@@ -8,7 +8,7 @@ public abstract class Player extends Element {
         this.board = board;
     }
 
-    public void move(int rowShift, int colShift) {
+    protected void move(int rowShift, int colShift) {
         row += rowShift;
         col += colShift;
     }

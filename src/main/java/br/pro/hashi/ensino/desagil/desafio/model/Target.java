@@ -3,14 +3,14 @@ package br.pro.hashi.ensino.desagil.desafio.model;
 import java.util.Random;
 
 public class Target extends Element {
-    private Board board;
+    private final Board board;
 
     public Target(int row, int col, Board board) {
         super(row, col);
         this.board = board;
     }
 
-    public void move(int rowShift, int colShift) {
+    private void move(int rowShift, int colShift) {
         row += rowShift;
         col += colShift;
     }
